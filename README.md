@@ -1,78 +1,88 @@
-# Tiệm Cà Phê &amp; Sách Góc Nhỏ
+# Tiệm Cà Phê & Sách Góc Nhỏ
 
-**Tên sản phẩm:** Tiệm Cà Phê Hoàng Sơn  
-**Tác giả:** Tạ Hoàng Sơn (tài khoản GitHub: `tahoangson3005-lgtm`)  
-**Bài tập:** A3 - Thiết kế Web và Triển khai hệ thống phần mềm (FIT4014), Đại học Đại Nam
+## 1. Sản phẩm này là gì?
 
-Website tĩnh giới thiệu tiệm cà phê kết hợp không gian đọc sách. Sản phẩm dùng HTML5 ngữ nghĩa, CSS3 responsive theo hướng mobile-first, không có backend và không lưu dữ liệu đặt bàn.
+Website tĩnh giới thiệu Tiệm Cà Phê & Sách Góc Nhỏ, gồm không gian quán, các trải nghiệm cà phê/trà/đọc sách, lịch mở cửa và form đặt bàn mô phỏng. Sản phẩm thuộc Bài tập lớn A3, học phần FIT4014 - Thiết kế Web và Triển khai hệ thống phần mềm, Đại học Đại Nam.
 
-## Liên kết sản phẩm
+- **Sinh viên thực hiện:** Tạ Hoàng Sơn
+- **Mã sinh viên:** 2071020164
+- **Lớp / Ngành:** Công nghệ Thông tin (ĐH Đại Nam)
+- **Giảng viên hướng dẫn:** ThS. Lê Thái Bảo
+- **Phiên bản bàn giao:** `v3`
 
-- **Repository:** <https://github.com/tahoangson3005-lgtm/tiem-ca-phe>
+## 2. Demo
+
 - **GitHub Pages:** <https://tahoangson3005-lgtm.github.io/tiem-ca-phe/>
-- **Trang kết quả:** <https://tahoangson3005-lgtm.github.io/tiem-ca-phe/ket-qua.html>
-- **Hồ sơ GitHub:** <https://github.com/tahoangson3005-lgtm>
-- **Hoạt động bàn giao:** [AI_LOG.md](AI_LOG.md) và [RELEASE_NOTES.md](RELEASE_NOTES.md)
+- **Trang kết quả mô phỏng:** <https://tahoangson3005-lgtm.github.io/tiem-ca-phe/ket-qua.html>
 
-## Cấu trúc thư mục
+URL được xác định từ remote Git `https://github.com/tahoangson3005-lgtm/tiem-ca-phe.git`. Khi nghiệm thu, nên mở liên kết bằng cửa sổ ẩn danh để kiểm tra bản đã xuất bản, tránh nội dung lưu trong cache.
+
+## 3. Tính năng hiện có
+
+- Điều hướng bằng liên kết neo tới phần giới thiệu, trải nghiệm, giờ mở cửa và đặt bàn.
+- Ba thẻ trải nghiệm được bố trí bằng CSS Grid.
+- Bảng lịch mở cửa dùng cấu trúc bảng semantic với `thead`, `tbody`, `th` và `scope`.
+- Form đặt bàn tĩnh dùng ràng buộc HTML5 (`required`, kiểu email, `minlength`, `maxlength`) và gửi bằng `GET` tới `ket-qua.html`.
+- CSS responsive: một cột thẻ ở màn hình hẹp, hai cột từ `640px` và ba cột từ `960px`.
+- Trạng thái bàn phím `:focus-visible` cho liên kết, nút và trường nhập.
+
+## 4. Cách mở hoặc chạy thử
+
+1. Mở `index.html` trực tiếp bằng trình duyệt; hoặc mở thư mục dự án trong VS Code và dùng tiện ích Live Server.
+2. Thử các liên kết điều hướng, ba thẻ, bảng lịch và form.
+3. Dùng phím `Tab` để đi qua các liên kết và trường nhập, quan sát viền focus.
+4. Thử gửi form khi để trống, nhập email sai định dạng, rồi nhập dữ liệu hợp lệ để xem `ket-qua.html`.
+
+Form chỉ chạy kiểm tra phía trình duyệt và đưa dữ liệu lên URL bằng `GET`; không nhập thông tin cá nhân thật khi thử trên bản công khai.
+
+## 5. Cấu trúc thư mục
 
 ```text
 tiem-ca-phe/
-├── index.html              # Trang chủ, giới thiệu, thực đơn, giờ mở cửa và form đặt bàn
-├── ket-qua.html            # Trang mô phỏng kết quả sau khi form hợp lệ
-├── css/
-│   └── style.css           # Bố cục, breakpoint và trạng thái tương tác
 ├── assets/
-│   └── images/             # Ảnh không gian, cà phê, trà và góc đọc sách
-├── README.md               # Hướng dẫn mở và kiểm tra sản phẩm
-├── AI_LOG.md               # Ghi nhận quyết định sử dụng AI
-└── RELEASE_NOTES.md        # Ghi chú bàn giao bản v7
+│   └── images/
+│       ├── ca-phe-phin.jpg
+│       ├── goc-doc-sach.jpg
+│       ├── khong-gian-quan.jpg
+│       └── tra-trai-cay.jpg
+├── css/
+│   └── style.css
+├── docs/
+│   ├── AI_LOG.md
+│   └── evidence-index.md
+├── index.html
+├── ket-qua.html
+├── README.md
+├── CHANGELOG.md
+├── AI_LOG.md
+└── RELEASE_NOTES.md
 ```
 
-## Chạy website local
+`AI_LOG.md` ở thư mục gốc là tài liệu lịch sử đã có từ trước; hồ sơ khai báo AI hiện hành của bản `v2` nằm tại [`docs/AI_LOG.md`](docs/AI_LOG.md).
 
-Mở trực tiếp `index.html` bằng trình duyệt cũng có thể tải được CSS và ảnh. Cách kiểm tra ổn định hơn là chạy server tĩnh:
+## 6. Đã kiểm tra
 
-### Python (nếu máy đã cài Python)
+Kiểm tra trực tiếp trên GitHub Pages:
 
-```powershell
-cd D:\tiem-ca-phe
-py -m http.server 4173
-```
+- Không có cuộn ngang toàn trang ở các chiều rộng `320px`, `640px`, `960px` và `1440px`.
+- Lưới thẻ lần lượt có một, hai và ba cột tại `320px`, `640px` và `960px` (ba cột tiếp tục ở `1440px`).
+- Dùng `Tab` để lấy focus bàn phím; phần tử đang focus hiển thị viền `:focus-visible`.
+- Ba trạng thái form: bỏ trống bị trình duyệt chặn; email sai định dạng bị chặn; dữ liệu hợp lệ chuyển tới trang kết quả bằng `GET`.
+- Mỗi trang `index.html` và `ket-qua.html` có đúng một `<h1>` và một `<main>`.
+- Network Status `200` đã xác nhận cho trang chủ, trang kết quả, CSS và ảnh hero.
 
-Hoặc dùng `python -m http.server 4173` nếu máy không hỗ trợ lệnh `py`.
+Chi tiết phép thử và kết quả có trong [bảng minh chứng](docs/evidence-index.md).
 
-Trong môi trường chưa cài Python/Node.js, có thể dùng tiện ích Live Server của VS Code để mở thư mục rồi truy cập địa chỉ do tiện ích cung cấp.
+## 7. Giới hạn / Chưa kiểm tra
 
-Sau khi server đã chạy, mở:
+- Form tĩnh chỉ mô phỏng kiểm tra HTML5 và chuyển tới `ket-qua.html` bằng phương thức `GET`; chưa gửi email, lưu cơ sở dữ liệu hoặc xác nhận đặt chỗ phía máy chủ.
+- Chưa có backend, API, cơ sở dữ liệu, bộ kiểm thử tự động hoặc CI.
+- Kiểm tra responsive được thực hiện tại các mốc nêu trên; không phải kiểm thử trên mọi trình duyệt, thiết bị hay mọi chiều rộng trung gian.
+- Các ảnh được đóng gói thành tệp cục bộ trong `assets/images/`; mã nguồn hiện không ghi URL nguồn riêng cho từng ảnh.
 
-- Trang chủ: <http://localhost:4173/>
-- Trang kết quả: <http://localhost:4173/ket-qua.html>
+## 8. Nguồn và khai báo AI
 
-Nhấn `Ctrl+C` trong terminal để dừng server.
-
-## Hướng dẫn kiểm tra
-
-1. Mở trang chủ và kiểm tra các liên kết điều hướng: **Giới thiệu**, **Trải nghiệm**, **Giờ mở cửa**, **Đặt bàn**.
-2. Cuộn tới phần “Trải nghiệm nổi bật”; kiểm tra ba thẻ cà phê, trà/bánh và tủ sách cùng ảnh tương ứng.
-3. Kiểm tra bảng lịch mở cửa có thể cuộn ngang trên màn hình nhỏ.
-4. Kéo tới form “Đặt bàn trước”.
-5. Gửi form khi để trống hoặc nhập email sai định dạng để xác nhận trình duyệt từ chối dữ liệu không hợp lệ.
-6. Nhập dữ liệu hợp lệ: họ tên từ 2 ký tự, email hợp lệ và yêu cầu chỗ ngồi từ 10 đến 500 ký tự, rồi nhấn **Xác nhận đặt bàn**.
-7. Kiểm tra [ket-qua.html](ket-qua.html): trang xác nhận nội dung đã qua kiểm tra HTML5 và nêu rõ dữ liệu chưa được gửi hoặc lưu.
-8. Thử ở các bề rộng khoảng 375 px, 640 px và 960 px trở lên. Mỗi cấp đặt từ 1 đến 2 và 3 cột thẻ; thanh điều hướng cũng chuyển sang bố cục hàng khi đủ rộng.
-
-## Phạm vi và nguồn xuất bản
-
-- Mã nguồn và tài liệu: <https://github.com/tahoangson3005-lgtm/tiem-ca-phe>
-- Mã nguồn trang được nộp tại commit `e8b528ec155d9f5c28ea8c5e6a441505e0eac3da`: <https://github.com/tahoangson3005-lgtm/tiem-ca-phe/commit/e8b528ec155d9f5c28ea8c5e6a441505e0eac3da>
-- Sản phẩm công khai bởi GitHub Pages; URL đã được kiểm tra trả về HTTP 200.
-- Đây là website tĩnh. Việc đặt bàn chỉ mô phỏng; không gửi email, không gọi API và không lưu vào cơ sở dữ liệu.
-
-## Hồ sơ và minh chứng
-
-- [GitHub repository](https://github.com/tahoangson3005-lgtm/tiem-ca-phe)
-- [GitHub profile](https://github.com/tahoangson3005-lgtm)
-- [GitHub Pages bản công khai](https://tahoangson3005-lgtm.github.io/tiem-ca-phe/)
-- [Ghi nhận quyết định AI](AI_LOG.md)
-- [Ghi chú phát hành v7](RELEASE_NOTES.md)
+- **Nguồn ảnh miễn phí:** Unsplash.com; các ảnh sử dụng trong website được lưu cục bộ trong `assets/images/`.
+- **Gemini:** gợi ý khung cấu trúc HTML5/CSS3 và đối chiếu rubric A3.
+- **GitHub Copilot:** hỗ trợ hoàn thiện mã nguồn, kiểm tra lỗi cú pháp và viết các tệp tài liệu dự án.
+- Sinh viên Tạ Hoàng Sơn trực tiếp kiểm tra và quyết định nội dung được chấp nhận hoặc chỉnh sửa cho phù hợp đề tài. Chi tiết phạm vi và quá trình tự kiểm chứng được ghi tại [`docs/AI_LOG.md`](docs/AI_LOG.md).
