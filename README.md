@@ -39,26 +39,24 @@ Form chỉ chạy kiểm tra phía trình duyệt và đưa dữ liệu lên URL
 
 ```text
 tiem-ca-phe/
+├── index.html
+├── ket-qua.html
+├── css/
+│   └── style.css
 ├── assets/
 │   └── images/
 │       ├── ca-phe-phin.jpg
 │       ├── goc-doc-sach.jpg
 │       ├── khong-gian-quan.jpg
 │       └── tra-trai-cay.jpg
-├── css/
-│   └── style.css
 ├── docs/
 │   ├── AI_LOG.md
 │   └── evidence-index.md
-├── index.html
-├── ket-qua.html
-├── README.md
 ├── CHANGELOG.md
-├── AI_LOG.md
-└── RELEASE_NOTES.md
+└── README.md
 ```
 
-`AI_LOG.md` ở thư mục gốc là tài liệu lịch sử đã có từ trước; hồ sơ khai báo AI hiện hành của bản `v2` nằm tại [`docs/AI_LOG.md`](docs/AI_LOG.md).
+Hồ sơ khai báo AI của bản bàn giao `v3` nằm tại [`docs/AI_LOG.md`](docs/AI_LOG.md).
 
 ## 6. Đã kiểm tra
 

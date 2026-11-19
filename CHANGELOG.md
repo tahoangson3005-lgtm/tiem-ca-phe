@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3] - 19/11/2026
+
+- **Thay đổi:** Dọn sạch hai tệp tài liệu trùng lặp (`AI_LOG.md`, `RELEASE_NOTES.md`) ở thư mục gốc; chuẩn hóa bộ 4 tệp hồ sơ bàn giao (`README.md`, `CHANGELOG.md`, `docs/AI_LOG.md`, `docs/evidence-index.md`) theo quy chuẩn Lab 8; đồng bộ toàn bộ thông tin với báo cáo Bài tập lớn A3 của sinh viên Tạ Hoàng Sơn (MSV: 2071020164).
+- **Đã kiểm tra:** Xác nhận cây thư mục sạch, toàn bộ đường dẫn tương đối (`css/style.css`, `assets/images/...`) khớp chữ hoa/thường và hoạt động ổn định trên GitHub Pages (<https://tahoangson3005-lgtm.github.io/tiem-ca-phe/>).
+- **Hạn chế:** Giữ nguyên giới hạn của website tĩnh (form mô phỏng qua `GET` tới `ket-qua.html`, chưa có backend/cơ sở dữ liệu, chưa kiểm thử trên thiết bị di động vật lý).
+- Commit v3 được đối chiếu: `e7e64f8`.
+
 ## v2 - Bản bàn giao
 
 - Cập nhật giao diện website giới thiệu Tiệm Cà Phê & Sách Góc Nhỏ.
@@ -26,9 +33,3 @@
 
 - Website giới thiệu tiệm cà phê kết hợp không gian đọc sách với trang chủ và trang kết quả mô phỏng đặt bàn.
 - Các nội dung nền gồm phần giới thiệu, ba trải nghiệm, bảng giờ mở cửa và form đặt bàn HTML5.
-
-## Thông tin Git tham chiếu
-
-- Remote `origin`: <https://github.com/tahoangson3005-lgtm/tiem-ca-phe>
-- Commit mới nhất được kiểm tra: `f61a724a49c0979dc48a9674313c73a3015daf94` - `feat: update UI, documentation and AI log for v2`.
-- Các tài liệu bàn giao trong workspace cần được commit và đẩy lên remote để xuất hiện trong repository và bản bàn giao.
